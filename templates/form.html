@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Place info</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+</head>
+<body>
+        <div class="main">
+          <h1 class="title">Country Info</h1>
+        <form class="form" action="/data" method="post">
+            <p class="form__label">Enter the name of the country</p>
+            <input type="text" name="country" class="form__input" placeholder="Name of the country">
+            <span class="popup__error"></span>
+            <p class="form__label">Choose what you want to know about</p>
+            <select name="required" class="form__select form__input">
+              <option class="form__option form__input" value="fullname">full name</option>
+              <option class="form__option form__input" value="lang">official language</option>
+              <option class="form__option form__input" value="weather">weather statistics</option>
+              <option class="form__option form__input" value="all">all</option>
+            </select>
+            <button type='post' class="button form__button">Send</button>
+        </form>
+      </div>
+</body>
+</html>
