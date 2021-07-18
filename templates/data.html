@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Place info</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/data.css') }}">
+</head>
+<body>
+        <div class="main">
+            <h1 class="main__country main__info">{{form_data["full_name"]}}</h1>
+            <h2 class="main__info">{{form_data["text"]}}</h2>
+            <p class="main__langugages main__info">{{form_data["lang"]}}</p>
+            <p class="main__info">{{form_data["weather_charts"]["text"]}}</p>
+            <div class="main__chartset"> 
+                <img class="main__image main__info" src={{form_data["weather_charts"]["temp_chart_url"]}} alt={{form_data["weather_charts"]["text"]}}>
+                <img class="main__image main__info" src={{form_data["weather_charts"]["press_char_url"]}} alt="">
+            </div>
+        </div>
+</body>
+</html>
