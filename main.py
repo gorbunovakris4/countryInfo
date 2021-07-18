@@ -18,7 +18,8 @@ def data():
         )
     if request.method == "POST":
         response = informer(request.form["country"])
-        # print(request.form, file=sys.stderr)
+        # We do request for all the information because it is the only opportunity api provides. 
+        # We cannot ask only official language or weather stats
         required_data = request.form["required"]
         if response['text'] != "":
             form_data = {
